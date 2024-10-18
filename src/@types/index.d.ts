@@ -1,14 +1,14 @@
 import { FC, PropsWithChildren } from 'react';
 
 declare global {
-  export type DefaultProps = {
+  type DefaultProps = {
     testId?: string;
     className?: string;
   };
 
-  export type Component<T = {}> = FC<PropsWithChildren<DefaultProps & T>>;
+  type Component<T = {}> = FC<PropsWithChildren<DefaultProps & T>>;
 
-  export type ClassNamesElements<T extends string[]> = {
+  type ClassNamesElements<T extends string[] = []> = {
     classNames?: {
       [K in T[number]]?: string;
     };

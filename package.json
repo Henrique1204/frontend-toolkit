@@ -31,7 +31,6 @@
     "dist"
   ],
   "devDependencies": {
-    "@babel/eslint-parser": "^7.23.3",
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "@chromatic-com/storybook": "^1.9.0",
     "@rollup/plugin-commonjs": "^21.0.2",
@@ -51,9 +50,11 @@
     "@types/jest": "^27.0.1",
     "@types/react": "^17.0.19",
     "@types/react-dom": "^17.0.9",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.10.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
-    "eslint": "^7.32.0",
+    "eslint": "^8.11.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-config-react-app": "^7.0.1",
     "eslint-config-ts-react-important-stuff": "^3.0.0",

@@ -15,7 +15,6 @@ const BaseInput: Component<Types.InputProps> = ({
   onEnterSubmit,
   validateError,
   mask = 'none',
-  name,
   onBlur,
   onFocus,
   classNames,
