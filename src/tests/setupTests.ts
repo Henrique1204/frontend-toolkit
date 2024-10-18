@@ -1,4 +1,4 @@
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
 
 export * from '@testing-library/react';
 export * from 'vitest';

@@ -1,4 +1,5 @@
 import './globals.css';
 
-export * from './components';
-export * from './theme/plugins/tailwind';
+export * as Components from './components';
+export * as Utils from './utils';
+export * as Theme from './theme';
