@@ -1,5 +1,5 @@
-import { paletteBase } from '@theme/base';
-import { PaletteTheme, Theme } from 'src/@types/theme';
+import { fontsBase, paletteBase } from '@theme/base';
+import { Fonts, PaletteTheme, Theme } from 'src/@types/theme';
 
 export const palette: PaletteTheme = {
   primary: {
@@ -18,6 +18,12 @@ export const palette: PaletteTheme = {
   },
 };
 
+const fonts: Partial<Fonts> = {
+  'title-sans': 'Poppins',
+  'body-sans': 'Poppins',
+};
+
 export const theme: Theme = {
   palette: Object.assign(paletteBase, palette),
+  fonts: Object.assign(fontsBase, fonts),
 };

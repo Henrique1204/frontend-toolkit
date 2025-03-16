@@ -1,4 +1,4 @@
-import { themeMap } from '@theme/index';
+import { themeMap } from '@theme/themes-map';
 
 import * as Types from 'src/@types/theme';
 
@@ -35,8 +35,7 @@ export const mapThemeVariables = <T extends object>(
 
 export const applyTheme = (themeName: Types.ThemeEnum = 'sininho'): void => {
   const colorsObject = mapThemeVariables(themeMap[themeName].palette, '');
-  // const fontFamilyObject = mapThemeVariables(themeMap[themeName].fonts, '');
-  const fontFamilyObject = {};
+  const fontFamilyObject = mapThemeVariables(themeMap[themeName].fonts, '');
 
   if (!colorsObject || !fontFamilyObject) return;
 

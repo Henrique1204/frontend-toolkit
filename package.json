@@ -13,7 +13,7 @@
     "url": "https://github.com/Henrique1204/frontend-toolkit/issues"
   },
   "scripts": {
-    "build": "rollup -c",
+    "build": "npx tsc --project tsconfig.json && rollup -c",
     "publish": "npm version patch && npm version publish",
     "dev": "rollup -c -w & npx serve --cors -l 5500",
     "storybook:dev": "storybook dev -p 6006",
@@ -25,8 +25,9 @@
     "pretty": "prettier --config ./.prettierrc.js --write \"src/**/*.{js,jsx,ts,tsx,json}\"",
     "prepare": "husky"
   },
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "es": "dist/index.es.js",
   "files": [
     "dist"
   ],
@@ -94,5 +95,11 @@
     "node": ">=20.0.0"
   },
   "engineStrict": true,
-  "types": "dist/index.d.ts"
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.es.js"
+    }
+  }
 }

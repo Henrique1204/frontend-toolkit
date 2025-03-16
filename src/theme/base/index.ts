@@ -1,4 +1,4 @@
-import { PaletteBase } from 'src/@types/theme';
+import { Fonts, PaletteBase } from 'src/@types/theme';
 
 export const paletteBase: PaletteBase = {
   neutral: {
@@ -47,4 +47,13 @@ export const paletteBase: PaletteBase = {
       dark: '#1976D2',
     },
   },
+};
+
+export const fontsBase: Fonts = {
+  'title-serif': 'Merriweather',
+  'title-sans': 'Roboto',
+  'title-mono': 'Recursive Mono',
+  'body-serif': 'Libre Baskerville',
+  'body-sans': 'Open Sans',
+  'body-mono': 'Roboto Mono',
 };

@@ -64,8 +64,20 @@ export type PaletteTheme = {
   };
 };
 
+export type FontVariants = 'serif' | 'sans' | 'mono';
+
+export type Fonts = {
+  'title-serif': string;
+  'title-sans': string;
+  'title-mono': string;
+  'body-serif': string;
+  'body-sans': string;
+  'body-mono': string;
+};
+
 export type Theme = {
   palette: PaletteBase & PaletteTheme;
+  fonts: Fonts;
 };
 
 export type ThemeEnum = 'sininho' | 'sapataria';

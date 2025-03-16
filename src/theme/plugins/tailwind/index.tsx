@@ -12,6 +12,7 @@ export const tailwindPlugin = () => {
         extend: {
           ...getBaseTheme(),
           colors: createTokenVariables('palette'),
+          fontFamily: createTokenVariables('fonts'),
           screens: {
             mobile: { max: '720px' },
             tablet: { min: '721px', max: '1199' },

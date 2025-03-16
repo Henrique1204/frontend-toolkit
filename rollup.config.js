@@ -23,26 +23,32 @@ export default [
         format: 'esm',
         sourcemap: true,
       },
+      {
+        file: packageJson.es,
+        format: 'es',
+        sourcemap: true,
+      },
     ],
     plugins: [
+      peerDepsExternal(),
+
+      resolve(),
+      commonjs(),
+
+      terser(),
+      typescript({ tsconfig: './tsconfig.json' }),
       postcss({
         extract: true,
         minimize: true,
         sourceMap: true,
       }),
-      peerDepsExternal(),
-
-      resolve(),
-      commonjs(),
-      typescript({ tsconfig: './tsconfig.json' }),
-
-      terser(),
     ],
+    external: [/\.css$/, 'tailwind.config.js'],
   },
   {
-    input: 'dist/esm/types/index.d.ts',
+    input: 'dist/types/index.d.ts',
     output: [{ file: 'dist/index.d.ts', format: 'esm' }],
-    external: [/\.css$/],
+    external: [/\.css$/, 'tailwind.config.js', 'react', 'react-dom'],
     plugins: [dts()],
   },
 ];
